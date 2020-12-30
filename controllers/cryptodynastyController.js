@@ -1,5 +1,5 @@
 const userShema = require('../shemas/userShema');
-const cryptodynastyModel = require('../models/cryptodynastyModel');
+const cryptodynastyModel = require('../models/cryptoDynastyModel');
 
 module.exports = class cryptodynastyController {
 

@@ -56,6 +56,7 @@ module.exports = class cryptodynastyController {
         SellModel
             .find({ $or: [{id_element: "301"}, {id_element: "302"}, {id_element: "303"}] })
             .limit(50)
+            .sort({date:-1})
             .exec(function(err,result){
                 var amountTKT = 0;
                 var amountEOS = 0;

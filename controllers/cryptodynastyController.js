@@ -81,8 +81,8 @@ module.exports = class cryptodynastyController {
             //Annual Rent.
             //Value for 1 EOS
             var RewardWeightPrice = (data[7]*1000)*data[6];
-            var AnnualRent = RewardWeightPrice/365;
-            data.push(AnnualRent.toFixed(2)); //[8]
+            var AnnualRent = (365/RewardWeightPrice)*100;
+            data.push(AnnualRent.toFixed(3)); //[8]
             
 
                 res.render('cryptodynasty/holder.pug', { user: user, dataHTML : data }) 

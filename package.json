@@ -1,0 +1,37 @@
+{
+  "name": "dapp-game-invest",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dapp_game_invest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emjy1990/website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Emjy1990/website/issues"
+  },
+  "homepage": "https://github.com/Emjy1990/website#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "crypto": "^1.0.1",
+    "crypto-js": "^4.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.1",
+    "helmet": "^4.1.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.10.6",
+    "nodemailer": "^6.4.11",
+    "passport": "^0.4.1",
+    "request": "^2.88.2",
+    "sanitize": "^2.1.0"
+  }
+}

@@ -1,0 +1,48 @@
+html
+  head
+    title= title
+
+    // Bootstrap core JavaScript
+    script(src="http://localhost:8000/vendor/jquery/jquery.min.js")
+    script(src="http://localhost:8000/vendor/bootstrap/js/bootstrap.bundle.min.js")
+
+    // Core plugin JavaScript
+    script(src="http://localhost:8000/vendor/jquery-easing/jquery.easing.min.js")
+    
+    script(src='http://localhost:8000/charts/chart.min.js')
+    script(src='http://localhost:8000/charts/utils.js')
+    script(src='http://localhost:8000/timeline/d3.v2.min.js')
+    script(src='http://localhost:8000/timeline/timeknots-min.js')
+    script(src="http://localhost:8000/template/sb-admin-2.min.js")
+    link(rel='stylesheet', href='http://localhost:8000/template/sb-admin-2.min.css')
+
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i')
+    link(rel='stylesheet', href='http://localhost:8000/vendor/fontawesome-free/css/all.min.css')
+
+  body(id="page-top")
+    div(id="wrapper")
+      include ../main/leftbar.pug
+      div(id="content-wrapper" class="d-flex flex-column")
+        div(id="content")
+            include ../main/topbar.pug
+            div(class="container-fluid")
+              // Page Heading
+              div(class="d-sm-flex align-items-center justify-content-between mb-1 ml-4")
+                  h1(class="h3 mb-0 text-gray-800") Cryptodynasty  - Presentation
+              div()
+                // Divider
+                hr(class="sidebar-divider d-none d-md-block")
+                p(class="text-center")
+                  img(src="/assets/cryptodynasty_logo.png")
+                p() Cryptodynasty is a mobile RPG. Game is base on hero's team (warrior,mage,archer) and infinite tower. You launch march up to die again and again.
+                p() After a march you win items which can craft equipment allowing to go even further and win better items.
+                p() Around this functionality many features has been added. Mount, PVP, boss, pool reward, market, events
+
+                ul()
+                  li() Site : 
+                    a(href="https://cryptodynasty.one/" target="_blanck") https://cryptodynasty.one/
+                  li() Cryptocurrency : EOS, ETH
+                  li() Launching date : June 2019
+
+                p(class="mb-5") For the moment Dapp Game Invest covers only EOS parts.
+include ../main/footer.pug

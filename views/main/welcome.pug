@@ -1,0 +1,77 @@
+html
+  head
+    title= title
+
+    // Bootstrap core JavaScript
+    script(src="http://localhost:8000/vendor/jquery/jquery.min.js")
+    script(src="http://localhost:8000/vendor/bootstrap/js/bootstrap.bundle.min.js")
+
+    // Core plugin JavaScript
+    script(src="http://localhost:8000/vendor/jquery-easing/jquery.easing.min.js")
+    
+    script(src='http://localhost:8000/charts/chart.min.js')
+    script(src='http://localhost:8000/charts/utils.js')
+    script(src='http://localhost:8000/timeline/d3.v2.min.js')
+    script(src='http://localhost:8000/timeline/timeknots-min.js')
+    script(src="http://localhost:8000/template/sb-admin-2.min.js")
+    link(rel='stylesheet', href='http://localhost:8000/template/sb-admin-2.min.css')
+
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i')
+    link(rel='stylesheet', href='http://localhost:8000/vendor/fontawesome-free/css/all.min.css')
+
+  body(id="page-top")
+    div(id="wrapper")
+      include ../main/leftbar.pug
+      div(id="content-wrapper" class="d-flex flex-column")
+        div(id="content")
+            include ../main/topbar.pug
+            div(class="row mb-5 ml-4")
+                div(class="col-md-10 blog-main")
+                    div(class="blog-post")
+                        h1(class="blog-post-title") Welcome
+                        p(class="blog-post-meta") January 1, 2021
+                        p() Thanks for coming, this website contain tools for help you to invest in Decentralized application game.
+                    // Divider
+                    hr(class="sidebar-divider d-none d-md-block")
+                    h2() What is this website? 
+                    p() Hello guys and girls! I'm glad to welcome you in my world :) A world where gaming and earning is brother! Your adventure begin with crypto and Dapp...
+                    br()
+                    blockquote(class="font-italic h5")
+                        p(class="mb-0 ml-5 border-left pl-2") A dapp game is a decentralized application build like a video game. Difference between dapp game and video game is with dapp game item, interaction, game money is on a blockchain ensuring the real possession of your account. 
+                    br()
+                    p() And like in financial market we can find stock exchange prices in Dapp. A game is hyped? Items are likely to be more and more expensive. A pool of token pays dividends based on gambling revenues? we have a profitability calculation. 
+                    br()
+                    h2() How can Dapp Invest Game website can help you?
+                    p() Dapp Game can be intimidating but it's a new way to play on the borderline between casino and video gaming.You can have the vision of the player who hopes to profit from his playing time or that of the investor who is going to buy in-game elements hoping to resell them at a higher price. In every case you need tool to follow the market and for now i have found any of that.
+                    p() I build this website to give you precise indicator to play and invest in Dapp. Let me present you the first available features. It's up to you to judge the potential.
+                    br()
+                    h2() Current Features
+                    p() From now I have work on one mobile Dapp called 
+                        a(href="https://cryptodynasty.one/" target="_blanck") CryptoDynasty
+                        |. I have construct many indicators to quickly see market movement and history.
+                    h4() Dapp User profiles
+                    p() Before explain what you can follown on this website let me explain my vision about profiles (like in financial market).
+                    p() For me you can have 3 sorts of players which different time spended and goals.
+                        ul()
+                            li() Holder
+                            li() Trader
+                            li() Player
+                    h5() Holder
+                    p() Holder concerns people who monitors market buy from time to time and sell when price is higher.
+                        | This profil need to be patient and not hope incredible rentability but doesn't spend a lot of time in action. They think in years, long-term.
+                    h5() Trader
+                    p() Trader concerns people who check market every day and earn money by buy/sell.
+                        | This profil need to have more time and great market analysis. They think in day-month, middle-term.
+                    h5() Player
+                    p() Player is people who love play and have many time. He understand quickly the more profitable way in game.
+                        | This profil is a rentability by hours. You play at MMO and farm X money by hours. 
+                        | You can start from nothing. He think rentabilité by actions on time.
+                    hr(class="sidebar-divider d-none d-md-block")
+                    h2() Earn is coming!
+                    p() Now you have understand this philosophy I let you browse on the website and ask me for bug or enhancement.
+                        | you can start by see 
+                        a(href="/cryptodynasty/holder") Holder section of Cryptodynasty 
+                        | waiting new features and new dapp game.
+                    hr(class="sidebar-divider d-none d-md-block")
+                    h2() Have a nice day of profitable game!
+    include footer.pug

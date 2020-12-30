@@ -1,0 +1,89 @@
+html
+  head
+    title= title
+
+    // Bootstrap core JavaScript
+    script(src="http://localhost:8000/vendor/jquery/jquery.min.js")
+    script(src="http://localhost:8000/vendor/bootstrap/js/bootstrap.bundle.min.js")
+
+    // Core plugin JavaScript
+    script(src="http://localhost:8000/vendor/jquery-easing/jquery.easing.min.js")
+    
+    script(src='http://localhost:8000/charts/chart.min.js')
+    script(src='http://localhost:8000/charts/utils.js')
+    script(src='http://localhost:8000/timeline/d3.v2.min.js')
+    script(src='http://localhost:8000/timeline/timeknots-min.js')
+    script(src="http://localhost:8000/template/sb-admin-2.min.js")
+    link(rel='stylesheet', href='http://localhost:8000/template/sb-admin-2.min.css')
+
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i')
+    link(rel='stylesheet', href='http://localhost:8000/vendor/fontawesome-free/css/all.min.css')
+
+    
+
+  body(id="page-top")
+    div(id="wrapper")
+      include ../main/leftbar.pug
+      div(id="content-wrapper" class="d-flex flex-column")
+        div(id="content")
+            include ../main/topbar.pug
+            div(class="row mb-5 ml-4")
+              div(class="col-md-10 blog-main")
+                h1(class="blog-post-title") Frequently Asked Questions
+                div(class="panel-group" id="accordion" role="tablist" aria-multiselectable="true")
+                    div(class="panel panel-default mt-5")
+                        <div class="panel-heading" role="tab" id="heading0">
+                            <h3 class="panel-title">
+                            <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">What are the vision of this website?
+                            </a>
+                            </h3>
+                        </div>
+                        <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
+                            <div class="panel-body px-3">
+                            <p>I like play at dapp game but i miss him great overview and dashboard of game data. I work to create a tools for having all metrics to invest in Dapp</p>
+                            </div>
+                        </div>
+                    
+                    
+                        <div class="panel panel-default mt-3">
+                            <div class="panel-heading" role="tab" id="heading1">
+                                <h3 class="panel-title">
+                                <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">Can we earn with Dapp Game?
+                                </a>
+                                </h3>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                                <div class="panel-body px-3">
+                                <p>Yes I'm convinced we can earn and more players coming more opportunities appears but it's like Forex or trading it's a skill.</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="panel panel-default mt-3">
+                            <div class="panel-heading" role="tab" id="heading2">
+                                <h3 class="panel-title">
+                                <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">What are your plans for the future?
+                                </a>
+                                </h3>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                                <div class="panel-body px-3">
+                                <p>For the moment I learn to construct a website from scratch. Don't hesitate to contact me to propose features! In future i see more dapp, tips for invest, dapp game analyse, invest simulator, value of your assets in real time and more :)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default mt-3">
+                            <div class="panel-heading" role="tab" id="heading2">
+                                <h3 class="panel-title">
+                                <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">How you collect datas from games?
+                                </a>
+                                </h3>
+                            </div>
+                            <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                                <div class="panel-body px-3">
+                                <p>Like dapp use blockchain and all information is public on blockchain we just need to read blockchain.</p>
+                                </div>
+                            </div>
+                        </div>
+    include footer.pug

@@ -1,0 +1,129 @@
+html
+  head
+    title= title
+
+    // Bootstrap core JavaScript
+    script(src="http://localhost:8000/vendor/jquery/jquery.min.js")
+    script(src="http://localhost:8000/vendor/bootstrap/js/bootstrap.bundle.min.js")
+
+    // Core plugin JavaScript
+    script(src="http://localhost:8000/vendor/jquery-easing/jquery.easing.min.js")
+    
+    script(src='http://localhost:8000/charts/chart.min.js')
+    script(src='http://localhost:8000/charts/utils.js')
+    script(src='http://localhost:8000/timeline/d3.v2.min.js')
+    script(src='http://localhost:8000/timeline/timeknots-min.js')
+    script(src="http://localhost:8000/template/sb-admin-2.min.js")
+    link(rel='stylesheet', href='http://localhost:8000/template/sb-admin-2.min.css')
+
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i')
+    link(rel='stylesheet', href='http://localhost:8000/vendor/fontawesome-free/css/all.min.css')
+
+  body(id="page-top")
+    div(id="wrapper")
+      include ../main/leftbar.pug
+      div(id="content-wrapper" class="d-flex flex-column")
+        div(id="content")
+            include ../main/topbar.pug
+            div(class="container-fluid")
+                // Page Heading
+                div(class="d-sm-flex align-items-center justify-content-between mb-5 ml-4")
+                    h1(class="h3 mb-0 text-gray-800") Cryptodynasty
+                div(class="d-sm-flex align-items-center justify-content-between mb-4 ml-4")
+                    h2(class="h5 mb-0 text-gray-800") Current TKT Statistics
+                // Divider
+                hr(class="sidebar-divider d-none d-md-block mt-2")
+                
+                //card
+                div(class="row mb-5")
+                    div(class="col-xl-3 col-md-6 mb-4")
+                        div(class="card border-left-primary shadow h-auto py-2")
+                            div(class="card-body")
+                                div(class="row no-gutters align-items-center")
+                                    div(class="col mr-2")
+                                        div(class="text-xs font-weight-bold text-primary text-uppercase mb-1") Total TKT
+                                            div(class="h5 mb-0 font-weight-bold text-gray-800")= dataHTML[2] + ' M'
+                                    div(class="col-auto")
+                                        i(class="fas fa-question-circle fa-2x text-gray-300" title="See cryptodynasty roadmap to learn how this token appear")
+                    div(class="col-xl-3 col-md-6 mb-4")
+                        div(class="card border-left-primary shadow h-auto py-2")
+                            div(class="card-body")
+                                div(class="row no-gutters align-items-center")
+                                    div(class="col mr-2")
+                                        div(class="text-xs font-weight-bold text-primary text-uppercase mb-1") Stacked TKT
+                                            div(class="h5 mb-0 font-weight-bold text-gray-800")= dataHTML[1] + ' M'
+                                    div(class="col-auto")
+                                        i(class="fas fa-question-circle fa-2x text-gray-300" title="Concern tkt stacked on cryptodynasty and DeFi app")
+                    div(class="col-xl-3 col-md-6 mb-4")
+                        div(class="card border-left-primary shadow h-auto py-2")
+                            div(class="card-body")
+                                div(class="row no-gutters align-items-center")
+                                    div(class="col mr-2")
+                                        div(class="text-xs font-weight-bold text-primary text-uppercase mb-1") Unstacked TKT
+                                            div(class="h5 mb-0 font-weight-bold text-gray-800")= dataHTML[3] + ' M'
+                                    div(class="col-auto")
+                                        i(class="fas fa- fa-2x text-gray-300")
+                    div(class="col-xl-3 col-md-6 mb-4")
+                        div(class="card border-left-primary shadow h-auto py-2")
+                            div(class="card-body")
+                                div(class="row no-gutters align-items-center")
+                                    div(class="col mr-2")
+                                        div(class="text-xs font-weight-bold text-primary text-uppercase mb-1") % Stacked TKT
+                                            div(class="h5 mb-0 font-weight-bold text-gray-800")= dataHTML[4] + ' %'
+                                    div(class="col-auto")
+                                        i(class="fas fa-university fa-2x text-gray-300")
+                
+                div(class="d-sm-flex align-items-center justify-content-between mb-4 ml-4")
+                    h2(class="h5 mb-0 text-gray-800") TKT Prices and Performance
+                // Divider
+                hr(class="sidebar-divider d-none d-md-block mt-2")
+
+                //card
+                div(class="row mb-5")
+                    div(class="col-xl-3 col-md-6 mb-4")
+                        div(class="card border-left-primary shadow h-auto py-2")
+                            div(class="card-body")
+                                div(class="row no-gutters align-items-center")
+                                    div(class="col mr-2")
+                                        div(class="text-xs font-weight-bold text-primary text-uppercase mb-1") TKT Prices
+                                            div(class="h5 mb-0 font-weight-bold text-gray-800")= dataHTML[6] + ' EOS'
+                                    div(class="col-auto")
+                                        i(class="fas fa-question-circle fa-2x text-gray-300" title="Price based on 50 last sales")
+                    div(class="col-xl-3 col-md-6 mb-4")
+                        div(class="card border-left-primary shadow h-auto py-2")
+                            div(class="card-body")
+                                div(class="row no-gutters align-items-center")
+                                    div(class="col mr-2")
+                                        div(class="text-xs font-weight-bold text-primary text-uppercase mb-1") Reward Weight
+                                            div(class="h5 mb-0 font-weight-bold text-gray-800")= dataHTML[7] + ' M TKT'
+                                    div(class="col-auto")
+                                        i(class="fas fa-question-circle fa-2x text-gray-300" title="Number of tkt stacked needed to produce 1 EOS per day")
+                    div(class="col-xl-3 col-md-6 mb-4")
+                        div(class="card border-left-primary shadow h-auto py-2")
+                            div(class="card-body")
+                                div(class="row no-gutters align-items-center")
+                                    div(class="col mr-2")
+                                        div(class="text-xs font-weight-bold text-primary text-uppercase mb-1") Annual Rent.
+                                            div(class="h5 mb-0 font-weight-bold text-gray-800")= dataHTML[8] + ' %'
+                                    div(class="col-auto")
+                                        i(class="fas fa-question-circle fa-2x text-gray-300" title="Cost of the number of TKT to produce 1 EOS per day / 365")
+                div(class="d-sm-flex align-items-center justify-content-between mb-4 ml-4")
+                    h2(class="h5 mb-0 text-gray-800") Pool Reward Revenues Metrics History
+                // Divider
+                hr(class="sidebar-divider d-none d-md-block mt-2")
+                //card
+                div(class="row mb-1")
+                    div(class="col-xl-3 col-md-6 mb-4")
+                        div(class="card border-left-primary shadow h-auto py-2")
+                            div(class="card-body")
+                                div(class="row no-gutters align-items-center")
+                                    div(class="col mr-2")
+                                        div(class="text-xs font-weight-bold text-primary text-uppercase mb-1") Current Pool Reward
+                                            div(class="h5 mb-0 font-weight-bold text-gray-800")= dataHTML[5] + ' EOS'
+                                    div(class="col-auto")
+                                        i(class="fas fa-question-circle fa-2x text-gray-300" title="See cryptodynasty roadmap to learn how pool reward is managed")
+                div(id="container" class="mt-1 mb-3" )
+                    canvas(id="myChart")
+                div(id="dataHTML" style="display: none;")= dataHTML[0]
+        script(src='/vendor/script_chart.js')
+include ../main/footer.pug

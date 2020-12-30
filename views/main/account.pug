@@ -1,0 +1,53 @@
+html
+  head
+    title= title
+
+    // Bootstrap core JavaScript
+    script(src="http://localhost:8000/vendor/jquery/jquery.min.js")
+    script(src="http://localhost:8000/vendor/bootstrap/js/bootstrap.bundle.min.js")
+
+    // Core plugin JavaScript
+    script(src="http://localhost:8000/vendor/jquery-easing/jquery.easing.min.js")
+    
+    script(src='http://localhost:8000/charts/chart.min.js')
+    script(src='http://localhost:8000/charts/utils.js')
+    script(src='http://localhost:8000/timeline/d3.v2.min.js')
+    script(src='http://localhost:8000/timeline/timeknots-min.js')
+    script(src="http://localhost:8000/template/sb-admin-2.min.js")
+    link(rel='stylesheet', href='http://localhost:8000/template/sb-admin-2.min.css')
+
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i')
+    link(rel='stylesheet', href='http://localhost:8000/vendor/fontawesome-free/css/all.min.css')
+
+  body(id="page-top")
+    div(id="wrapper")
+      include leftbar.pug
+      div(class="container-fluid")
+        include topbar.pug
+        div(class="container")
+                
+                div(class="row justify-content-center")
+                    if message != ""
+                    div(class="text-center col-lg-8 col-md-10 col-xs-12 alert alert-" + message.type role="alert")= message.content
+                    div(class="text-center col-lg-8 col-md-10 col-xs-12")
+                        h1(class="h4 text-gray-900 mb-4") Account
+                        form(action="/account" method="POST" class="user")
+                            if update == "yes"  
+                                div(class="form-group row")
+                                    input(type="text" class="form-control form-control-user text-center" id="firstname" name="firstname" value= user.firstname )
+                                div(class="form-group row")   
+                                    input(type="text" class="form-control form-control-user text-center" id="lastname" name="lastname" value= user.lastname)
+                                div(class="form-group row")
+                                    input(type="email" class="form-control form-control-user text-center" id="email" name="email" value= user.email disabled)
+                                div(class="form-group row")
+                                    button(type="submit" class="btn btn-primary btn-user btn-block") Save
+                            else 
+                                div(class="form-group row")
+                                    input(type="text" class="form-control form-control-user text-center" id="firstname" name="firstname" placeholder= user.firstname disabled)
+                                div(class="form-group row")   
+                                    input(type="text" class="form-control form-control-user text-center" id="lastname" name="lastname" placeholder= user.lastname disabled)
+                                div(class="form-group row")
+                                    input(type="email" class="form-control form-control-user text-center" id="email" name="email" placeholder= user.email disabled)
+                                div(class="form-group row")
+                                    a(href="/account?update=yes" type="button" class="btn btn-primary btn-user btn-block") Update Account                  
+    include footer.pug

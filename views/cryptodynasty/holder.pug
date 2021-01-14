@@ -1,7 +1,7 @@
 html
   head
     title= title
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     // Bootstrap core JavaScript
     script(src="/vendor/jquery/jquery.min.js")
     script(src="/vendor/bootstrap/js/bootstrap.bundle.min.js")
@@ -106,7 +106,7 @@ html
                                         div(class="text-xs font-weight-bold text-primary text-uppercase mb-1") Annual Rent.
                                             div(class="h5 mb-0 font-weight-bold text-gray-800")= dataHTML[8] + ' %'
                                     div(class="col-auto")
-                                        i(class="fas fa-question-circle fa-2x text-gray-300" title="Cost of the number of TKT to produce 1 EOS per day / 365")
+                                        i(class="fas fa-question-circle fa-2x text-gray-300" title="( 1 EOS by day during 1 year (365) / Cost of the number of TKT to produce 1 EOS per day ) * 100")
                 div(class="d-sm-flex align-items-center justify-content-between mb-4 ml-4")
                     h2(class="h5 mb-0 text-gray-800") Pool Reward Revenues Metrics History
                 // Divider

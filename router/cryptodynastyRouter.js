@@ -9,8 +9,6 @@ router
         CryptodynastyController.empty(req, res);
     })
     .get('/holder', async (req, res) => {
-        var ip = req.connection.remoteAddress;
-        console.log(ip)
         CryptodynastyController.holder(req, res);
     })
 

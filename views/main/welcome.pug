@@ -2,20 +2,7 @@ html
   head
     title= title
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    // Bootstrap core JavaScript
-    script(src="/vendor/jquery/jquery.min.js")
-    script(src="/vendor/bootstrap/js/bootstrap.bundle.min.js")
-
-    // Core plugin JavaScript
-    script(src="/vendor/jquery-easing/jquery.easing.min.js")
-    
-    script(src='/charts/chart.min.js')
-    script(src='/charts/utils.js')
-    script(src='/timeline/d3.v2.min.js')
-    script(src='/timeline/timeknots-min.js')
-    script(src="/template/sb-admin-2.min.js")
     link(rel='stylesheet', href='/template/sb-admin-2.min.css')
-
     link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i')
     link(rel='stylesheet', href='/vendor/fontawesome-free/css/all.min.css')
 
@@ -25,8 +12,8 @@ html
       div(id="content-wrapper" class="d-flex flex-column")
         div(id="content")
             include ../main/topbar.pug
-            div(class="row mb-5 ml-4")
-                div(class="col-md-10 blog-main")
+            div(class="row col-12")
+                div(class="col-md-10 blog-main mb-2")
                     div(class="blog-post")
                         h1(class="blog-post-title") Welcome
                         p(class="blog-post-meta") January 1, 2021
@@ -74,4 +61,5 @@ html
                         | waiting new features and new dapp game.
                     hr(class="sidebar-divider d-none d-md-block")
                     h2() Have a nice day of profitable game!
+    include script_js.pug
     include footer.pug
